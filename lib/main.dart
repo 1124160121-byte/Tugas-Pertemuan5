@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   final List<String> experiences = [
     'Senior Backend Engineer - EDC Bank DKI',
     'Backend & System Architect - Secure Payment EDC',
-    'Lead Developer - Aplikasi Sekurindo'
+    'Lead Developer - Aplikasi Sekurindo',
     'Backend Engineer - Pengembangan Sistem E-money',
   ];
 
@@ -40,7 +40,7 @@ class MainApp extends StatelessWidget {
                 backgroundColor: Colors.grey,
                 child: Icon(Icons.person, size: 50, color: Colors.white),
               ),
-              const SizedBox(width: 16),
+              const SizedBox(height: 16),
               Column(
                 children: [
                   Text(
@@ -84,10 +84,10 @@ class MainApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const StatItem(count: '15', label: 'Proyek'),
-                    const SizedBox(height: 24),
+                    const SizedBox(width: 24),
                     const StatItem(count: '1.2K', label: 'Followers'),
                     const SizedBox(width: 24),
-                    StatItem(count: 42, label: 'Following'),
+                    const StatItem(count: '42', label: 'Following'),
                   ],
                 ),
               ),
@@ -100,21 +100,23 @@ class MainApp extends StatelessWidget {
                 ),
               ),
               const Divider(),
-              ListView.builder(
-                itemCount: experiences.length,
-                itemBuilder: (context, index) {
-                  return Card(
-                    elevation: 2,
-                    margin: const EdgeInsets.symmetric(vertical: 6),
-                    child: ListTile(
-                      leading: const Icon(
-                        Icons.work,
-                        color: Colors.blueAccent,
+              Expanded(
+                child: ListView.builder(
+                  itemCount: experiences.length,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      elevation: 2,
+                      margin: const EdgeInsets.symmetric(vertical: 6),
+                      child: ListTile(
+                        leading: const Icon(
+                          Icons.work,
+                          color: Colors.blueAccent,
+                        ),
+                        title: Text(experiences[index]),
                       ),
-                      title: Text(experiences[index]),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ],
           ),
