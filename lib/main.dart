@@ -7,10 +7,10 @@ void main() {
 class MainApp extends StatelessWidget {
   MainApp({super.key});
 
-  final String userName = 'I Ketut Gunawan, S.Kom, M.T.I.';
-  final String role = 'Senior Backend Engineer & Dosen';
+  final String userName = 'Ande Saputra';
+  final String role = 'Pemula atau Mahasiswa';
   final List<String> experiences = [
-    'Senior Backend Engineer - EDC Bank DKI',
+    'Belum Pernah Bekerja',
     'Backend & System Architect - Secure Payment EDC',
     'Lead Developer - Aplikasi Sekurindo',
     'Backend Engineer - Pengembangan Sistem E-money',
@@ -83,11 +83,11 @@ class MainApp extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const StatItem(count: '15', label: 'Proyek'),
+                    const StatItem(count: '0', label: 'Proyek'),
                     const SizedBox(width: 24),
-                    const StatItem(count: '1.2K', label: 'Followers'),
+                    const StatItem(count: '2', label: 'Followers'),
                     const SizedBox(width: 24),
-                    const StatItem(count: '42', label: 'Following'),
+                    const StatItem(count: '5', label: 'Following'),
                   ],
                 ),
               ),
@@ -145,13 +145,7 @@ class StatItem extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 4),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.grey[600],
-          ),
-        ),
+        Text(label, style: TextStyle(fontSize: 14, color: Colors.grey[600])),
       ],
     );
   }
